@@ -1,0 +1,605 @@
+{
+	"info": {
+		"_postman_id": "1f664d78-416d-4817-a9f2-db3c1353df6a",
+		"name": "store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Login user",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "osamaaabdalmalik@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "57475600",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/login",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register user",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "osama",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "osajhsgabdalmalik@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "password confirmation",
+									"value": "123456789",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/register",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log out user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3Jlc2V0LXBhc3N3b3JkIiwiaWF0IjoxNjY2MjgxMjYyLCJleHAiOjM0NjYyODEyNjIsIm5iZiI6MTY2NjI4MTI2MiwianRpIjoiVERlZ2NmazJNaHlISm1YOCIsInN1YiI6IjExIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.odJuunD_m6hD3abuhydJgZcL8OJTacNwGuQu_1haY6g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTAuMC4yLjI6ODAwMC9hcGkvdmVyaWZ5LWNvZGUiLCJpYXQiOjE2NjYyMTQzMzcsImV4cCI6MzQ2NjIxNDMzNywibmJmIjoxNjY2MjE0MzM3LCJqdGkiOiJsU1pDUXV2M2pneTRYMHZXIiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.dKyBVTLsDbvz5TdSmDT7dTtnFin_FT7hEksq7aGcLoU",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "esraa",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "esraa@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/logout",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"logout"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY2NTU5NDUwNywiZXhwIjoxNjY1NTk4MTA3LCJuYmYiOjE2NjU1OTQ1MDcsImp0aSI6InA5UXA1NTZuMnh0YnFqMVoiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sxiN_lXQl0ksHrKPYMn_aKTtSwyef0P1oGya-t5dbN8",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Verify Code",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "osamaaabdalmalik@gmail.com",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/send-verify-code",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"send-verify-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Code",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "remember_token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY2NTUyOTU0NSwiZXhwIjoxNjY1NTMzMTQ1LCJuYmYiOjE2NjU1Mjk1NDUsImp0aSI6ImlSUEVOSWJ4SHAwdGprWVkiLCJzdWIiOjksInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.xxpufd1qwqpu68hd1knCtmMN1y3WTyKAe5ptKANEBlw",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "osamaaabdalmalik@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "57475600",
+									"type": "default"
+								},
+								{
+									"key": "verifyCode",
+									"value": "76237",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/verify-code",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"verify-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forget password",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "osamaaabdalmalik@gmail.com",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/forget-password",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"forget-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY2NTYwNzc3MywiZXhwIjoxNjY1NjExMzczLCJuYmYiOjE2NjU2MDc3NzMsImp0aSI6Im9IYm12UkNhVWJhdmxqMlAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.oNiB1adK5Xdwg2RI8kGRD4t4eCnwdvgImcdH5WA_4po",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "remember_token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY2NTUyOTU0NSwiZXhwIjoxNjY1NTMzMTQ1LCJuYmYiOjE2NjU1Mjk1NDUsImp0aSI6ImlSUEVOSWJ4SHAwdGprWVkiLCJzdWIiOjksInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.xxpufd1qwqpu68hd1knCtmMN1y3WTyKAe5ptKANEBlw",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "osamaaabdalmalik@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "574756001",
+									"type": "text"
+								},
+								{
+									"key": "password confirmation",
+									"value": "574756001",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}api/reset-password",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"reset-password"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY2NTU5NDUwNywiZXhwIjoxNjY1NTk4MTA3LCJuYmYiOjE2NjU1OTQ1MDcsImp0aSI6InA5UXA1NTZuMnh0YnFqMVoiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sxiN_lXQl0ksHrKPYMn_aKTtSwyef0P1oGya-t5dbN8",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "store",
+			"item": [
+				{
+					"name": "Get all main categories",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTkyLjE2OC4yMDEuMTE0OjgwMDAvYXBpL3ZlcmlmeS1jb2RlIiwiaWF0IjoxNjY2MTgwMTM2LCJleHAiOjM0NjYxODAxMzYsIm5iZiI6MTY2NjE4MDEzNiwianRpIjoidFJiVzlSQ285MHdvUDVyYyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.w1jaltRpRu7NKdFnaYHtGvnCkrD7i8Or3EFN779sphI",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}api/main-categories",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"main-categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get home",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTkyLjE2OC4yMDEuMTE0OjgwMDAvYXBpL3ZlcmlmeS1jb2RlIiwiaWF0IjoxNjY2MTgwMTM2LCJleHAiOjM0NjYxODAxMzYsIm5iZiI6MTY2NjE4MDEzNiwianRpIjoidFJiVzlSQ285MHdvUDVyYyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.w1jaltRpRu7NKdFnaYHtGvnCkrD7i8Or3EFN779sphI",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}api/home",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"home"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get main category",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTAuMC4yLjI6ODAwMC9hcGkvcmVzZXQtcGFzc3dvcmQiLCJpYXQiOjE2NjYyODMxNjksImV4cCI6MzQ2NjI4MzE2OSwibmJmIjoxNjY2MjgzMTY5LCJqdGkiOiJkNEpHZFk2NkV1WUR3WGIzIiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.yEJmyatcNpippEPfOMSzFqxNaAfK8ysNF39FKOnTyhk",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}api/main-category/:id",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"main-category",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get sub category",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTkyLjE2OC4yMDEuMTE0OjgwMDAvYXBpL3ZlcmlmeS1jb2RlIiwiaWF0IjoxNjY2MTgwMTM2LCJleHAiOjM0NjYxODAxMzYsIm5iZiI6MTY2NjE4MDEzNiwianRpIjoidFJiVzlSQ285MHdvUDVyYyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.w1jaltRpRu7NKdFnaYHtGvnCkrD7i8Or3EFN779sphI",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}api/sub-category/:id",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"sub-category",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all products",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTkyLjE2OC4yMDEuMTE0OjgwMDAvYXBpL3ZlcmlmeS1jb2RlIiwiaWF0IjoxNjY2MTgwMTM2LCJleHAiOjM0NjYxODAxMzYsIm5iZiI6MTY2NjE4MDEzNiwianRpIjoidFJiVzlSQ285MHdvUDVyYyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.w1jaltRpRu7NKdFnaYHtGvnCkrD7i8Or3EFN779sphI",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}api/products",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get product",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTkyLjE2OC4yMDEuMTE0OjgwMDAvYXBpL3ZlcmlmeS1jb2RlIiwiaWF0IjoxNjY2MTgwMTM2LCJleHAiOjM0NjYxODAxMzYsIm5iZiI6MTY2NjE4MDEzNiwianRpIjoidFJiVzlSQ285MHdvUDVyYyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.w1jaltRpRu7NKdFnaYHtGvnCkrD7i8Or3EFN779sphI",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}api/product/:id",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"product",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000/",
+			"type": "string"
+		}
+	]
+}
